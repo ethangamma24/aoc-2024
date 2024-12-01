@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func readEntireFile(path string) []byte {
+func ReadEntireFile(path string) []byte {
 	content, err := os.ReadFile(path)
 	if err != nil {
 		log.Fatal(err)
@@ -15,7 +15,7 @@ func readEntireFile(path string) []byte {
 	return content
 }
 
-func fileLinesScanner(path string) *bufio.Scanner {
+func FileLinesScanner(path string) *bufio.Scanner {
 	file, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err)
